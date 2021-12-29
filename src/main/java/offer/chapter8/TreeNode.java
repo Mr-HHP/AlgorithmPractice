@@ -199,4 +199,26 @@ public class TreeNode {
     return result;
   }
   
+  /**
+   * 二叉搜索树根据节点值查找指定节点
+   *
+   * @param root 二叉树根节点
+   * @param val 节点值
+   * @return 指定节点值的节点
+   */
+  public TreeNode searchBST(TreeNode root, int val) {
+    TreeNode cur = root;
+    while (cur != null) {
+      if (cur.val == val) {
+        break;
+      }
+      if (cur.val < val) {
+        cur = cur.right;
+      } else {
+        cur = cur.left;
+      }
+    }
+    return cur;
+  }
+  
 }
