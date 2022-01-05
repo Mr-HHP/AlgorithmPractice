@@ -189,7 +189,7 @@ public class TreeNode {
         // 根据后序遍历“左右根”的顺序，优先遍历当前节点的右子节点
         cur = cur.right;
       } else {
-        // 当前节点没有右子节点，遍历当前节点
+        // 当前节点没有右子节点，或者右子节点等于上一个遍历的节点，可以遍历当前节点
         stack.pop();
         result.add(cur.val);
         prev = cur;
