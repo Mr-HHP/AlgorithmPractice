@@ -21,10 +21,10 @@ public class InterviewQuestion57 {
    *   1、遍历数组找到小于或等于nums[i]的最大的数字j，如果nums[i] - j <= t，则返回true
    *   2、遍历数组找到大于或等于nums[i]的最小的数字j，如果j - nums[i] <= t，则返回true
    *
-   * set是一个TreeSet，大小为k，因此
-   *   空间复杂度为：O(k)
-   * 对TreeSet做查找、添加和删除操作的时间复杂度都是O(logk)，因此
-   *   时间复杂度为：O(nlogk)
+   * 空间复杂度为：O(k)
+   *   set是一个TreeSet，大小为k
+   * 时间复杂度为：O(nlogk)
+   *   对TreeSet做查找、添加和删除操作的时间复杂度都是O(logk)
    *
    * @param nums 给定的整数数组
    * @param k 给定的正数k
@@ -56,7 +56,15 @@ public class InterviewQuestion57 {
   }
   
   /**
+   * 利用哈希表
    * 时间复杂度为O(n)的解法
+   *   将0-t的数字放在若干格桶中，桶的大小为t+1，这样做的好处是同一个桶内的任意两个数字的差的绝对值一定小于等于t。
+   *   如果桶内不存在数字，则需要在相邻的两个桶中（往前一个桶和往后一个桶）寻找是否存在满足条件的数字。
+   *
+   * 空间复杂度：O(k)
+   *   因为每一个桶的长度是k
+   * 时间复杂度：O(n)
+   *   因为在哈希表中查找、添加和删除操作的时间复杂度都是O(1)，数组长度为n，
    *
    * @param nums 给定的数组
    * @param k 给定的正数k
