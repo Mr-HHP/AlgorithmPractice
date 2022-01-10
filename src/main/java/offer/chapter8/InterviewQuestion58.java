@@ -23,7 +23,12 @@ public class InterviewQuestion58 {
     /**
      * 添加事项
      *   当插入一个新事项是，事项对应的时间区间不能重叠。
-     *   
+     *   利用二叉搜索树解题。
+     *   Java中TreeSet和TreeMap的底层实现就是二叉搜索树，由于该题需要保存start和end两个字段，所以使用TreeMap来解题
+     *
+     * 时间复杂度：O(logn)
+     *   TreeMap的底层实现是平衡的二叉搜索树，二叉搜索树的查找、插入和删除的时间复杂度都是O(logn)
+     *
      * @param start 待添加事项的开始时间
      * @param end   待添加事项的结束时间
      * @return 添加成功返回true，否则返回false
