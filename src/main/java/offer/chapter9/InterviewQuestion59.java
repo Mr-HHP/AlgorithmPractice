@@ -20,6 +20,8 @@ public class InterviewQuestion59 {
  * 利用最小堆实现该数据结构
  *   先找出k个最大的数字，那么第k大的数字就是这k个最大数字中最小的一个。
  *   利用最小堆找到k个数字中最小的一个
+ *
+ * 空间复杂度：O(n)
  */
 class KthLargest {
   /**
@@ -37,6 +39,8 @@ class KthLargest {
   
   /**
    * 函数add，用来添加数据流中的新数字，并返回数据流中已经读取到的数字的第k大数字
+   *
+   * 时间复杂度：O(logk)
    *
    * @param val 待添加的数字
    * @return 已经读取到的数据流中的第k大的数字
