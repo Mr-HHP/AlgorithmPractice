@@ -1,5 +1,8 @@
 package offer;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 运行主类
  *
