@@ -6,7 +6,7 @@ package leetcode;
  * @author Mr.黄
  * @date 2022/03/18
  **/
-public class Leetchode720 {
+public class Leetcode720 {
     public String longestWord(String[] words) {
         Trie trie = new Trie();
         for (String word : words) {
