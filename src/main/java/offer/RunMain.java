@@ -10,9 +10,6 @@ import java.util.*;
  **/
 public class RunMain {
     public static void main(String[] args) {
-//        main1(null);
-//        System.out.println((int) 'a');
-//        System.out.println((int) 'z');
         System.out.println(getNum(47));
         System.out.println(getNum(48));
         System.out.println(getNum(49));
