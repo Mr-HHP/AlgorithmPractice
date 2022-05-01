@@ -4,7 +4,7 @@ import java.util.Stack;
  * @author Mr.黄
  * @date 2022/04/16
  **/
-public class Test {
+public class HuaWeiOd1 {
     /**
      * 华为OD一面编程题：
      * 将括号内的字符按照前面的数字进行膨胀，最后结果倒序输出
