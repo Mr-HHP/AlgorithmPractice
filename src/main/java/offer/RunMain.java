@@ -10,15 +10,35 @@ import java.util.*;
  **/
 public class RunMain {
     public static void main(String[] args) {
-        System.out.println(getNum(47));
-        System.out.println(getNum(48));
-        System.out.println(getNum(49));
-        System.out.println((97 + (122 - 97) % 26));
-        System.out.println((97 + (123 - 97) % 26));
-        System.out.println((97 + (124 - 97) % 26));
-        System.out.println((97 + (200 - 97) % 26));
-        System.out.println((97 + (300 - 97) % 26));
+//        System.out.println(getNum(47));
+//        System.out.println(getNum(48));
+//        System.out.println(getNum(49));
+//        System.out.println((97 + (122 - 97) % 26));
+//        System.out.println((97 + (123 - 97) % 26));
+//        System.out.println((97 + (124 - 97) % 26));
+//        System.out.println((97 + (200 - 97) % 26));
+//        System.out.println((97 + (300 - 97) % 26));
+        int[] array = new int[]{4, 3, 6, 8, 1};
+        insertSort(array, array.length);
+        for (int i : array) {
+            System.out.println(i);
+        }
     }
+    
+    //array[]为待排序数组，n为数组长度
+    public static void insertSort(int array[], int n) {
+        int i, j, temp;
+        for (i = 1; i < n; i++) {
+            if (array[i] < array[i - 1]) {
+                temp = array[i];
+                for (j = i; j >= 1 && array[j - 1] > temp; j--) {
+                    array[j] = array[j - 1];
+                }
+                array[j] = temp;
+            }
+        }
+    }
+    
     public static void main1(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
