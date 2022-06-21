@@ -16,17 +16,17 @@ public class InterviewQuestion62 {
     }
 }
 
-class Trie {
-    static class TrieNode {
-        TrieNode[] children;
-        boolean isWord;
-        
-        public TrieNode() {
-            // 每个节点可能对应26个小写英文字母的任意一个
-            children = new TrieNode[26];
-        }
-    }
+class TrieNode {
+    TrieNode[] children;
+    boolean isWord;
     
+    public TrieNode() {
+        // 第一个元素对应字母‘a’的子节点；第二个元素对应字母‘b’的子节点，以此类推
+        children = new TrieNode[26];
+    }
+}
+
+class Trie {
     private TrieNode root;
     
     public Trie() {
