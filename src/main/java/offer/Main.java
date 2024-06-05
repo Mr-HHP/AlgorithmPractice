@@ -10,6 +10,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
+        in.next();
+        in.nextLine();
         String[] vlanPool = in.nextLine().split(",");
         int needVlan = in.nextInt();
         List<Integer> list = new ArrayList<>();
