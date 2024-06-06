@@ -5,7 +5,7 @@ import java.util.Map;
 
 /**
  * @author Mr.黄
- * @description LeetCode
+ * @description 两数之和
  * @since 2024/6/5 0:19
  **/
 public class LeetCode1 {
