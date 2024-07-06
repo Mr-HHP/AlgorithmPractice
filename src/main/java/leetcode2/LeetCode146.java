@@ -1,7 +1,6 @@
 package leetcode2;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -25,21 +24,21 @@ public class LeetCode146 {
 }
 
 class LRUCache {
-    ListNode head;
-    ListNode tail;
+    ListNode146 head;
+    ListNode146 tail;
     int capacity;
-    Map<Integer, ListNode> map;
+    Map<Integer, ListNode146> map;
     public LRUCache(int capacity) {
         this.capacity = capacity;
         map = new HashMap<>();
-        head = new ListNode(-1, -1);
-        tail = new ListNode(-1, -1);
+        head = new ListNode146(-1, -1);
+        tail = new ListNode146(-1, -1);
         head.next = tail;
         tail.perv = head;
     }
 
     public int get(int key) {
-        ListNode listNode = map.get(key);
+        ListNode146 listNode = map.get(key);
         if (listNode == null) {
             return -1;
         }
@@ -47,9 +46,9 @@ class LRUCache {
         return listNode.value;
     }
 
-    public void moveToTali(ListNode listNode) {
-        ListNode perv = listNode.perv;
-        ListNode next = listNode.next;
+    public void moveToTali(ListNode146 listNode) {
+        ListNode146 perv = listNode.perv;
+        ListNode146 next = listNode.next;
         perv.next = next;
         next.perv = perv;
 
@@ -60,9 +59,9 @@ class LRUCache {
     }
 
     public void put(int key, int value) {
-        ListNode listNode = map.get(key);
+        ListNode146 listNode = map.get(key);
         if (listNode == null) {
-            listNode = new ListNode(key,value);
+            listNode = new ListNode146(key,value);
             if (map.size() == capacity) {
                 map.remove(head.next.key);
                 head.next = head.next.next;
@@ -80,12 +79,12 @@ class LRUCache {
     }
 }
 
-class ListNode {
+class ListNode146 {
     int key;
     int value;
-    ListNode next;
-    ListNode perv;
-    public ListNode(int key, int value) {
+    ListNode146 next;
+    ListNode146 perv;
+    public ListNode146(int key, int value) {
         this.key = key;
         this.value = value;
     }
