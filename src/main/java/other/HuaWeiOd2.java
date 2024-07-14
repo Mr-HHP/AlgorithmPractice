@@ -1,4 +1,4 @@
-package huaweiod;
+package other;
 
 /**
  * @author Mr.黄

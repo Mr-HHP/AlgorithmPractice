@@ -1,4 +1,4 @@
-package huaweiod;
+package other;
 
 import java.util.*;
 
