@@ -22,7 +22,7 @@ public class Main23 {
         }
     }
 
-    public static void dfs(int count, String[] values, boolean[] isVisit, StringBuffer sb, TreeSet treeSet, int n) {
+    public static void dfs(int count, String[] values, boolean[] isVisit, StringBuffer sb, TreeSet<String> treeSet, int n) {
         if (count == n) {
             treeSet.add(sb.toString());
         } else {
